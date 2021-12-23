@@ -1,0 +1,45 @@
+{
+    "\/task-log-entry\/{id}": {
+        "delete": {
+            "tags": [
+                "TaskLogEntry"
+            ],
+            "summary": "Delete a TaskLogEntry",
+            "operationId": "deleteTaskLogEntry",
+            "parameters": [
+                {
+                    "$ref": "#\/components\/parameters\/idParameter"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Retrieving a Task Log Entry",
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "properties": {
+                                    "data": {
+                                        "$ref": "#\/components\/schemas\/TaskLogEntry"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "404": {
+                    "$ref": "#\/components\/responses\/NotFound"
+                },
+                "401": {
+                    "$ref": "#\/components\/responses\/Unauthorized"
+                }
+            },
+            "security": [
+                {
+                    "bearer_auth": [],
+                    "cookie_auth": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.task-log .react-json-view {
+    overflow-y: scroll;
+    max-width: 800px;
+}
+
+.task-log .date {
+    display: block;
+}
+
+.task-log .time {
+    white-space: nowrap;
+}
+
+
+.task-log .nowrap {
+    white-space: nowrap;
+}
+

@@ -1,0 +1,4 @@
+composer.phar
+/vendor/
+.idea
+_ide_helper.php

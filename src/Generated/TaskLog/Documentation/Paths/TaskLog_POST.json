@@ -1,0 +1,50 @@
+{
+    "\/task-log": {
+        "post": {
+            "tags": [
+                "Task Log"
+            ],
+            "summary": "Create a new Task Log",
+            "operationId": "createTaskLog",
+            "requestBody": {
+                "required": true,
+                "content": {
+                    "application\/json": {
+                        "schema": {
+                            "$ref": "#\/components\/schemas\/TaskLog"
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "201": {
+                    "description": "Task Log created",
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "properties": {
+                                    "data": {
+                                        "$ref": "#\/components\/schemas\/TaskLog"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "401": {
+                    "$ref": "#\/components\/responses\/Unauthorized"
+                },
+                "422": {
+                    "$ref": "#\/components\/responses\/Invalid"
+                }
+            },
+            "security": [
+                {
+                    "bearer_auth": [],
+                    "cookie_auth": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "\/task-log-entry\/{id}": {
+        "put": {
+            "tags": [
+                "TaskLogEntry"
+            ],
+            "summary": "Update a TaskLogEntry",
+            "operationId": "updateTaskLogEntry",
+            "parameters": [
+                {
+                    "$ref": "#\/components\/parameters\/idParameter"
+                }
+            ],
+            "requestBody": {
+                "required": true,
+                "content": {
+                    "application\/json": {
+                        "schema": {
+                            "$ref": "#\/components\/schemas\/TaskLogEntry"
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "200": {
+                    "description": "Retrieving a Task Log Entry",
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "properties": {
+                                    "data": {
+                                        "$ref": "#\/components\/schemas\/TaskLogEntry"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "404": {
+                    "$ref": "#\/components\/responses\/NotFound"
+                },
+                "401": {
+                    "$ref": "#\/components\/responses\/Unauthorized"
+                }
+            },
+            "security": [
+                {
+                    "bearer_auth": [],
+                    "cookie_auth": []
+                }
+            ]
+        }
+    }
+}

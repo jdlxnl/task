@@ -1,0 +1,33 @@
+{
+    "name": "jdlxnl/task",
+    "description": "TaskLog for running background tasks",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jeroen de Lau",
+            "email": "jeroen.delau@gmail.com"
+        }
+    ],
+    "require" : {
+        "jdlxnl/jdlx": "dev-main",
+        "jdlxnl/slack": "dev-main",
+        "ext-json": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jdlx\\Task\\JdlxTaskServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Jdlx\\Task\\": "src/"
+        }
+    },
+    "repositories": [
+        { "name": "jdlxnl/jdlx", "type": "vcs", "url": "https://github.com/jdlxnl/jdlx" },
+        { "name": "jdlxnl/slack", "type": "vcs", "url": "https://github.com/jdlxnl/slack" }
+    ]
+}

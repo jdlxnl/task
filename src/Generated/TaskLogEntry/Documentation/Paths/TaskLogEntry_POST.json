@@ -1,0 +1,50 @@
+{
+    "\/task-log-entry": {
+        "post": {
+            "tags": [
+                "Task Log Entry"
+            ],
+            "summary": "Create a new Task Log Entry",
+            "operationId": "createTaskLogEntry",
+            "requestBody": {
+                "required": true,
+                "content": {
+                    "application\/json": {
+                        "schema": {
+                            "$ref": "#\/components\/schemas\/TaskLogEntry"
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "201": {
+                    "description": "Task Log Entry created",
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "properties": {
+                                    "data": {
+                                        "$ref": "#\/components\/schemas\/TaskLogEntry"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "401": {
+                    "$ref": "#\/components\/responses\/Unauthorized"
+                },
+                "422": {
+                    "$ref": "#\/components\/responses\/Invalid"
+                }
+            },
+            "security": [
+                {
+                    "bearer_auth": [],
+                    "cookie_auth": []
+                }
+            ]
+        }
+    }
+}

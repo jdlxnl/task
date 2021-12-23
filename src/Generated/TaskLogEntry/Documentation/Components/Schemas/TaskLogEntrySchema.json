@@ -1,0 +1,54 @@
+{
+    "TaskLogEntry": {
+        "title": "TaskLogEntry model",
+        "description": "TaskLogEntry model",
+        "required": [
+            "id",
+            "task_log_id",
+            "entry_number",
+            "severity",
+            "message"
+        ],
+        "properties": {
+            "id": {
+                "description": "Value for id",
+                "type": "string",
+                "readOnly": true
+            },
+            "task_log_id": {
+                "description": "Value for task_log_id",
+                "type": "string"
+            },
+            "entry_number": {
+                "description": "Value for entry_number",
+                "type": "integer"
+            },
+            "severity": {
+                "description": "Value for severity",
+                "type": "string"
+            },
+            "message": {
+                "description": "Value for message",
+                "type": "string"
+            },
+            "context": {
+                "description": "Value for context",
+                "type": "object"
+            },
+            "created_at": {
+                "description": "Value for created_at",
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+            },
+            "updated_at": {
+                "description": "Value for updated_at",
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+            }
+        },
+        "type": "object",
+        "readOnly": true
+    }
+}

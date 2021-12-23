@@ -1,0 +1,49 @@
+{
+    "TaskLog": {
+        "title": "TaskLog model",
+        "description": "TaskLog model",
+        "required": [
+            "id",
+            "type",
+            "step",
+            "status"
+        ],
+        "properties": {
+            "id": {
+                "description": "Value for id",
+                "type": "string",
+                "readOnly": true
+            },
+            "type": {
+                "description": "Value for type",
+                "type": "string"
+            },
+            "step": {
+                "description": "Value for step",
+                "type": "string"
+            },
+            "status": {
+                "description": "Value for status",
+                "type": "string"
+            },
+            "payload": {
+                "description": "Value for payload",
+                "type": "object"
+            },
+            "created_at": {
+                "description": "Value for created_at",
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+            },
+            "updated_at": {
+                "description": "Value for updated_at",
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+            }
+        },
+        "type": "object",
+        "readOnly": true
+    }
+}
