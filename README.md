@@ -1,10 +1,20 @@
-###### Package
+# Package
 
 Add the package by loading it through composer.
 
+## Install
+
+Add this reposity to your composer.json
+```json
+{
+    "repositories": [
+        { "name": "jdlxnl/task", "type": "vcs", "url": "https://github.com/jdlxnl/task" }
+    ]
+}
+```
 
 ```shell
-composer require jdlxnl/task
+composer require jdlxnl/task:dev-main
 ```
 
 Run the following commands to setup the database
@@ -15,7 +25,7 @@ php artisan vendor:publish --provider="Jdlx\Task\JdlxTaskServiceProvider"
 php artisan migrate
 ```
 
-##Install horizon
+## Install horizon
 
 ```shell
 composer require laravel/horizon
@@ -93,14 +103,16 @@ mix.js('resources/js/tasklog/index.js', 'public/vendor/jdlx/task/app.js').react(
 
 make sure to add following packages to package.json
 ```json
-        "react": "^17.0.1",
-        "react-bootstrap": "^1.4.3",
-        "react-data-table-component": "^7.0.0-alpha-5",
-        "react-dom": "^17.0.1",
-        "react-icons": "^4.1.0",
-        "react-json-view": "^1.20.4",
-        "react-router": "^5.2.0",
-        "react-router-dom": "^5.2.0",
-        "react-select": "^3.2.0",
-        "styled-components": "^5.2.1"
+{
+  "react": "^17.0.1",
+  "react-bootstrap": "^1.4.3",
+  "react-data-table-component": "^7.0.0-alpha-5",
+  "react-dom": "^17.0.1",
+  "react-icons": "^4.1.0",
+  "react-json-view": "^1.20.4",
+  "react-router": "^5.2.0",
+  "react-router-dom": "^5.2.0",
+  "react-select": "^3.2.0",
+  "styled-components": "^5.2.1"
+}
 ```
