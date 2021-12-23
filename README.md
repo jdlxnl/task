@@ -1,20 +1,15 @@
 # Package
 
-Add the package by loading it through composer.
+Adds the ability to create tasks, and task logging.
+Adds a section to horizon to allow TaskLogs to be visible
+with task processing.
 
 ## Install
 
 Add this repository to your composer.json
-```json
-{
-    "repositories": [
-        { "name": "jdlxnl/task", "type": "vcs", "url": "https://github.com/jdlxnl/task" }
-    ]
-}
-```
 
 ```shell
-composer require jdlxnl/task:dev-main
+composer require jdlxnl/task
 ```
 
 Run the following commands to setup the database

@@ -1,8 +1,8 @@
 {
     "name": "jdlxnl/task",
-    "description": "TaskLog for running background tasks",
+    "description": "Task and logging for running background tasks",
     "type": "library",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Jeroen de Lau",
@@ -25,9 +25,5 @@
         "psr-4": {
             "Jdlx\\Task\\": "src/"
         }
-    },
-    "repositories": [
-        { "name": "jdlxnl/jdlx", "type": "vcs", "url": "https://github.com/jdlxnl/jdlx" },
-        { "name": "jdlxnl/slack", "type": "vcs", "url": "https://github.com/jdlxnl/slack" }
-    ]
+    }
 }
