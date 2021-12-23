@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "865f2262ce2df23df27a9decfeb9c7cb",
+    "content-hash": "320cb3fef48b24148a53ae94d408bbe3",
     "packages": [
         {
             "name": "brick/math",
@@ -1382,16 +1382,16 @@
         },
         {
             "name": "jdlxnl/jdlx",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jdlxnl/jdlx.git",
-                "reference": "940cfec9c6cd06ed754244df251b05f65d8634a8"
+                "reference": "29b89c4d8076bb19d7adef324e36a244041cee49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jdlxnl/jdlx/zipball/940cfec9c6cd06ed754244df251b05f65d8634a8",
-                "reference": "940cfec9c6cd06ed754244df251b05f65d8634a8",
+                "url": "https://api.github.com/repos/jdlxnl/jdlx/zipball/29b89c4d8076bb19d7adef324e36a244041cee49",
+                "reference": "29b89c4d8076bb19d7adef324e36a244041cee49",
                 "shasum": ""
             },
             "require": {
@@ -1399,6 +1399,7 @@
                 "fakerphp/faker": "^1.17",
                 "laravel/framework": "^8.12",
                 "laravel/sanctum": "^2.9",
+                "php": ">=8",
                 "phpunit/phpunit": "^9.5",
                 "spatie/laravel-permission": "^4.0"
             },
@@ -1415,8 +1416,9 @@
                     "Jdlx\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "proprietary"
+                "MIT"
             ],
             "authors": [
                 {
@@ -1424,25 +1426,25 @@
                     "email": "jeroen.delau@gmail.com"
                 }
             ],
-            "description": "Foundation for rest APIs in laravel",
+            "description": "Foundation for rest APIs in Laravel",
             "support": {
-                "source": "https://github.com/jdlxnl/jdlx/tree/1.0.0",
-                "issues": "https://github.com/jdlxnl/jdlx/issues"
+                "issues": "https://github.com/jdlxnl/jdlx/issues",
+                "source": "https://github.com/jdlxnl/jdlx/tree/1.0.1"
             },
-            "time": "2021-12-23T08:14:30+00:00"
+            "time": "2021-12-23T09:45:50+00:00"
         },
         {
             "name": "jdlxnl/slack",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jdlxnl/slack.git",
-                "reference": "a93bc717cfb7a5d328a87d81f0c6265a4c9ae79f"
+                "url": "https://github.com/jdlxnl/slack.git",
+                "reference": "dddb6b0e39b4b8c0881557cc96b5061a6d63dd30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jdlxnl/slack/zipball/a93bc717cfb7a5d328a87d81f0c6265a4c9ae79f",
-                "reference": "a93bc717cfb7a5d328a87d81f0c6265a4c9ae79f",
+                "url": "https://api.github.com/repos/jdlxnl/slack/zipball/dddb6b0e39b4b8c0881557cc96b5061a6d63dd30",
+                "reference": "dddb6b0e39b4b8c0881557cc96b5061a6d63dd30",
                 "shasum": ""
             },
             "require": {
@@ -1461,6 +1463,10 @@
                     "Jdlx\\Slack\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Jeroen de Lau",
@@ -1469,10 +1475,10 @@
             ],
             "description": "Wrapper around slack library to make notification easier",
             "support": {
-                "source": "https://github.com/jdlxnl/slack/tree/1.0.1",
-                "issues": "https://github.com/jdlxnl/slack/issues"
+                "issues": "https://github.com/jdlxnl/slack/issues",
+                "source": "https://github.com/jdlxnl/slack/tree/1.0.2"
             },
-            "time": "2021-12-23T08:06:28+00:00"
+            "time": "2021-12-23T10:33:00+00:00"
         },
         {
             "name": "laravel/framework",
