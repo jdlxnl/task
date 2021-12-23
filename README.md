@@ -4,7 +4,7 @@ Add the package by loading it through composer.
 
 ## Install
 
-Add this reposity to your composer.json
+Add this repository to your composer.json
 ```json
 {
     "repositories": [

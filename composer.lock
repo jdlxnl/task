@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56c6d524bc8e59c61a07fab3fb064ad2",
+    "content-hash": "865f2262ce2df23df27a9decfeb9c7cb",
     "packages": [
         {
             "name": "brick/math",
@@ -1382,16 +1382,16 @@
         },
         {
             "name": "jdlxnl/jdlx",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jdlxnl/jdlx.git",
-                "reference": "267c5c274d1f86301fc5e27430909510422a5fc7"
+                "reference": "940cfec9c6cd06ed754244df251b05f65d8634a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jdlxnl/jdlx/zipball/267c5c274d1f86301fc5e27430909510422a5fc7",
-                "reference": "267c5c274d1f86301fc5e27430909510422a5fc7",
+                "url": "https://api.github.com/repos/jdlxnl/jdlx/zipball/940cfec9c6cd06ed754244df251b05f65d8634a8",
+                "reference": "940cfec9c6cd06ed754244df251b05f65d8634a8",
                 "shasum": ""
             },
             "require": {
@@ -1402,7 +1402,6 @@
                 "phpunit/phpunit": "^9.5",
                 "spatie/laravel-permission": "^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1427,29 +1426,28 @@
             ],
             "description": "Foundation for rest APIs in laravel",
             "support": {
-                "source": "https://github.com/jdlxnl/jdlx/tree/develop",
+                "source": "https://github.com/jdlxnl/jdlx/tree/1.0.0",
                 "issues": "https://github.com/jdlxnl/jdlx/issues"
             },
-            "time": "2021-12-22T16:41:24+00:00"
+            "time": "2021-12-23T08:14:30+00:00"
         },
         {
             "name": "jdlxnl/slack",
-            "version": "dev-main",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:jdlxnl/slack.git",
-                "reference": "f5aaa6ab6679abdf6e1521e6b571844f421b0774"
+                "reference": "a93bc717cfb7a5d328a87d81f0c6265a4c9ae79f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jdlxnl/slack/zipball/f5aaa6ab6679abdf6e1521e6b571844f421b0774",
-                "reference": "f5aaa6ab6679abdf6e1521e6b571844f421b0774",
+                "url": "https://api.github.com/repos/jdlxnl/slack/zipball/a93bc717cfb7a5d328a87d81f0c6265a4c9ae79f",
+                "reference": "a93bc717cfb7a5d328a87d81f0c6265a4c9ae79f",
                 "shasum": ""
             },
             "require": {
                 "laravel/slack-notification-channel": "^2.3"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1471,10 +1469,10 @@
             ],
             "description": "Wrapper around slack library to make notification easier",
             "support": {
-                "source": "https://github.com/jdlxnl/slack/tree/develop",
+                "source": "https://github.com/jdlxnl/slack/tree/1.0.1",
                 "issues": "https://github.com/jdlxnl/slack/issues"
             },
-            "time": "2021-12-22T17:26:38+00:00"
+            "time": "2021-12-23T08:06:28+00:00"
         },
         {
             "name": "laravel/framework",
@@ -7768,13 +7766,12 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "jdlxnl/jdlx": 20,
-        "jdlxnl/slack": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-json": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
 }
