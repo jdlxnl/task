@@ -10,9 +10,9 @@
         }
     ],
     "require" : {
-        "jdlxnl/jdlx": "dev-main",
-        "jdlxnl/slack": "dev-main",
-        "ext-json": "*"
+        "jdlxnl/slack": "^1.0",
+        "ext-json": "*",
+        "jdlxnl/jdlx": "^1.0"
     },
     "extra": {
         "laravel": {
