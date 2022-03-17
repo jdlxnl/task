@@ -4,6 +4,7 @@ namespace Jdlx\Task\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Support\Str;
 use Jdlx\Task\Generated\TaskLog\TaskLogFields;
@@ -108,6 +109,13 @@ class TaskLog extends Model
     public function scopeInProgress($query)
     {
         return $query->where('status', self::IN_PROGRESS);
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function entries(){
+        return $this->hasMany(TaskLogEntry::class)->orderBy("entry_number");
     }
 
     /**
