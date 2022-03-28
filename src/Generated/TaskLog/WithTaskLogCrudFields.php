@@ -12,7 +12,7 @@ use \Jdlx\Task\Models\TaskLog;
 use \Jdlx\Task\Models\TaskLogEntry;
 
 /**
- *  @property string id
+ *  @property int id
  *  @property string type
  *  @property string step
  *  @property string status
