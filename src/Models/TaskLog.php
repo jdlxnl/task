@@ -10,7 +10,6 @@ use Illuminate\Support\Str;
 use Jdlx\Task\Generated\TaskLog\TaskLogFields;
 use Jdlx\Task\Generated\TaskLog\WithTaskLogCrudFields;
 use Jdlx\Task\TaskLogListener;
-use Jdlx\Traits\UsesUuid;
 use Psr\Log\LogLevel;
 
 class TaskLog extends Model
@@ -23,7 +22,6 @@ class TaskLog extends Model
 
     use HasFactory;
     use WithTaskLogCrudFields;
-    use UsesUuid;
 
     /**
      * The attributes that are mass assignable.

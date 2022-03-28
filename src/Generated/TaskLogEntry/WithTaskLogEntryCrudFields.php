@@ -9,8 +9,8 @@ use \Illuminate\Database\Eloquent\Relations\BelongsTo;
 use \Jdlx\Task\Models\TaskLog;
 
 /**
- *  @property string id
- *  @property string task_log_id
+ *  @property int id
+ *  @property int task_log_id
  *  @property integer entry_number
  *  @property string severity
  *  @property string message

@@ -6,13 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Jdlx\Task\Generated\TaskLogEntry\TaskLogEntryFields;
 use Jdlx\Task\Generated\TaskLogEntry\WithTaskLogEntryCrudFields;
-use Jdlx\Traits\UsesUuid;
 
 class TaskLogEntry extends Model
 {
     use HasFactory;
     use WithTaskLogEntryCrudFields;
-    use UsesUuid;
 
         /**
          * The attributes that are mass assignable.
