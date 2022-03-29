@@ -2,6 +2,7 @@
 
 namespace Jdlx\Task\Generated\TaskLog;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Jdlx\Http\Controllers\Traits\CanFilterSortAndPage;
 use Jdlx\Task\Models\TaskLog;
@@ -42,9 +43,14 @@ trait WithTaskLogCrudRoutes
     }
 
 
-    public function show(TaskLog $taskLog)
+    public function show(Request $request, TaskLog $taskLog)
     {
         $this->authorize('view', $taskLog);
+
+        $with = $this->getRelationshipFields($request, $this->getRelationshipWhiteList());
+        if(count($with) > 0){
+            $taskLog->load($with);
+        }
 
         $resource = $this->getResourceClass();
         return response()->success(new $resource($taskLog));
@@ -102,5 +108,19 @@ trait WithTaskLogCrudRoutes
             "entries",
             "subjects",
         ];
+    }
+
+    /**
+     * @param Request $request
+     * @param Builder $items
+     * @param array $withWhiteList
+     * @return array|false|string[]
+     */
+    public function getRelationshipFields(Request $request, $withWhiteList = [])
+    {
+        $with = $request->get("with", "entries");
+        return array_filter(explode(",", $with), function($field) use ($withWhiteList)  {
+            return in_array($field, $withWhiteList);
+        });
     }
 }
