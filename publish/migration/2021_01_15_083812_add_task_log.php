@@ -14,7 +14,7 @@ class AddTaskLog extends Migration
     public function up()
     {
         Schema::create('task_logs', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('type');
             $table->string('step');
             $table->string('status');
@@ -23,8 +23,9 @@ class AddTaskLog extends Migration
         });
 
         Schema::create('task_log_entries', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->uuid('task_log_id');
+            $table->id();
+            $table->foreignId('task_log_id')
+                ->constrained('task_logs');
             $table->integer('entry_number')->default(0);
             $table->string('severity');
             $table->text('message');
@@ -33,7 +34,8 @@ class AddTaskLog extends Migration
         });
 
         Schema::create('task_logs_relations', function (Blueprint $table) {
-            $table->string('task_log_id');
+            $table->foreignId('task_log_id')
+                ->constrained('task_logs');
             $table->string('task_logs_relation_id');
             $table->string('task_logs_relation_type');
             $table->timestamps();
