@@ -1,0 +1,12 @@
+{
+  "name": "admin-ui-task",
+  "version": "1.0.0",
+  "dependencies": {
+    "react-json-view": "^1.20.4",
+    "react-select": "^5.2.2",
+    "lodash": "^4.17.21"
+  },
+  "scripts": {
+    "postinstall": "node ../../../script/install_module.js task"
+  }
+}

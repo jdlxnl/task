@@ -87,6 +87,12 @@ SLACK_WEBHOOK=https://hooks.slack.com/services/asd/B01HB2M20asdf4V/s8GCasfsaDJes
 SLACK_DEFAULT_CHANNEL=my-channel
 ```
 
+## Admin UI
+
+If you have the admin UI installed, you can add the tasklog using
+```sh
+php artisan adminui:module:task
+````
 
 ## Client
 Building the client app
