@@ -3,7 +3,6 @@
 
 namespace Jdlx\Task\Traits;
 
-use Illuminate\Support\Str;
 use Jdlx\Task\Models\TaskLog;
 
 /**
@@ -15,26 +14,24 @@ use Jdlx\Task\Models\TaskLog;
  */
 trait WithTaskLog
 {
-    //use ProgressiveBackoff;
-    protected $log_id;
+    protected $log;
 
     /**
-     * Set the log_id that we will be using
+     * Set the log that we will be using
      * for retries
      */
     public function startLog()
     {
-        $this->log_id = Str::uuid();
+        $this->log = new TaskLog();
+        $this->log->save();
     }
 
     public function getLog()
     {
-        $log = TaskLog::find($this->log_id);
-        if (!$log) {
-            $log = new TaskLog();
-            $log->id = $this->log_id;
-            $log->save();
+        if (!$this->log) {
+            $this->log = new TaskLog();
+            $this->log->save();
         }
-        return $log;
+        return $this->log;
     }
 }
