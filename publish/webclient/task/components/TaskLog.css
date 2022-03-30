@@ -1,0 +1,36 @@
+.variable-row {
+  word-break: break-word;
+}
+
+.task-log .date {
+  display: block;
+}
+
+.task-log .time {
+  white-space: nowrap;
+}
+
+.task-log .nowrap {
+  white-space: nowrap;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.border-color-grey {
+  border-color: lightgrey !important;
+}
+
+.rdt_TableHeadRow,
+.rdt_Pagination {
+  background-color: rgb(244, 246, 248) !important;
+}
+
+.rdt_TableHeadRow {
+  font-size: 14px;
+}

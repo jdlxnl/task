@@ -3,6 +3,7 @@
 namespace Jdlx\Task;
 
 use Illuminate\Support\ServiceProvider;
+use Jdlx\Task\Console\Commands\AdminUi\InstallTaskModuleCommand;
 use Jdlx\Task\Console\Commands\TaskLog\ClearTaskLogCommand;
 use Jdlx\Task\Console\Commands\TaskLog\ListTaskLogCommand;
 use Jdlx\Task\Console\Commands\TaskLog\ViewTaskLogCommand;
@@ -26,7 +27,8 @@ class JdlxTaskServiceProvider extends ServiceProvider
             $this->commands([
                 ClearTaskLogCommand::class,
                 ListTaskLogCommand::class,
-                ViewTaskLogCommand::class
+                ViewTaskLogCommand::class,
+                InstallTaskModuleCommand::class
             ]);
         }
         //$this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
