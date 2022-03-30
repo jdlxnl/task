@@ -50,52 +50,9 @@ class TaskLogDetails extends React.Component {
     const codeBg = { backgroundColor: "#121212" };
 
     const { data } = this.props;
-    const { id, created_at, updated_at, type, payload, status } = data;
+    const { id, created_at, updated_at, type, payload, status, entries } = data;
     const { showPayload, showContext } = this.state;
-    const entries = [
-      {
-        context: null,
-        created_at: "2022-03-24T15:22:09+00:00",
-        entry_number: 1,
-        id: "5a5541bb-885c-4b97-a6f2-e0d383c40ec8",
-        message: "41493 Testing a task that succeeds.",
-        severity: "info",
-        task_log_id: "21d74d79-9825-42ba-a4b6-21d08aca550e",
-        updated_at: "2022-03-24T15:22:09+00:00",
-      },
-      {
-        context: null,
-        created_at: "2022-03-24T15:22:09+00:00",
-        entry_number: 2,
-        id: "80da2f78-fcb7-4e0e-9f49-43679ca67bf1",
-        message: "Attempting an action",
-        severity: "info",
-        task_log_id: "21d74d79-9825-42ba-a4b6-21d08aca550e",
-        updated_at: "2022-03-24T15:22:09+00:00",
-      },
-      {
-        context: {
-          closed_at: "2020-11-20T10:11:01+00:00",
-          confirmed: true,
-          created_at: "2020-11-17T06:54:37+00:00",
-          currency: "GBP",
-          email: "astral_uk@hotmail.co.uk",
-          financial_status: "paid",
-          gateway: "paypal",
-          id: 3067991392437,
-          note: null,
-          number: 10497,
-          subtotal_price: "21.98",
-        },
-        created_at: "2022-03-24T15:22:10+00:00",
-        entry_number: 3,
-        id: "0ef2ea6c-8a10-47fe-b67b-1f826b88a9fd",
-        message: "And succeeded!",
-        severity: "info",
-        task_log_id: "21d74d79-9825-42ba-a4b6-21d08aca550e",
-        updated_at: "2022-03-24T15:22:10+00:00",
-      },
-    ];
+
     const started = moment(created_at);
     const ended = moment(
       entries.length ? [...entries].pop().created_at : updated_at
