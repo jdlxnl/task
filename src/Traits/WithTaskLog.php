@@ -14,23 +14,30 @@ use Jdlx\Task\Models\TaskLog;
  */
 trait WithTaskLog
 {
+    protected $log_id;
     protected $log;
 
     /**
      * Set the log that we will be using
-     * for retries
+     * for retries. This is currently not working
+     * as we do not want to create a tasklogID
+     * at task creation time
      */
     public function startLog()
     {
-        $this->log = new TaskLog();
-        $this->log->save();
+
     }
 
     public function getLog()
     {
-        if (!$this->log) {
+        if (!empty($this->log_id) && empty($this->log)) {
+            $this->log = TaskLog::find($this->log_id);
+        }
+
+        if (empty($log_id) || empty($this->log)) {
             $this->log = new TaskLog();
             $this->log->save();
+            $this->log_id = $this->log->id;
         }
         return $this->log;
     }
